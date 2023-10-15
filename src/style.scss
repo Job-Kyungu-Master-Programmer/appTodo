@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './Todo.scss';
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100%;
+    background: #eeeeee;
+}
+
+
+.container {
+   margin: 2em auto;
+   display: flex;
+   justify-content: space-between;
+//    border: 1px solid rgb(216, 216, 216);
+   max-width: 90%;
+   min-height: 55em;
+}
+
+.list-cardos {
+    padding: .6em;
+    // border: 1px solid rgb(211, 211, 211);
+    display: flex;
+    flex-wrap: wrap;
+    width: 67em;
+    height: 50em;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    color: rgb(93, 93, 253) 
+}
+
+.card {
+    margin-right: 1.8em;
+    overflow: hidden;
+    border-radius: .5em;
+    width: 20em;
+    min-height: 10em;
+    background: rgb(255, 255, 255);
+}
+
+.card__image {
+    width: 100%;
+    height: 11em;
+    overflow: hidden;
+
+    > img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card__text {
+    padding: 1em;
+}
+
+.card__title {
+    margin: 0;
+    margin-bottom: .95em;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #202020;
+}
+
+.card__date {
+    margin-bottom: .5em;
+    color: #000000;
+    
+    .card-d-span {
+        margin-left: .2em;
+        color: #a7a7a7;
+    }
+}
+.card__content {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+.card__btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__price {
+    display: flex;
+    font-size: 1.1em;
+
+    > td {
+        font-weight: 500;
+        margin-right: .2em;
+        color: #5e7779;
+    }
+}
+
+.card__btn {
+    display: flex;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+     > img {
+        width: 2em; height: 1.8em;
+     }
+}
+
+.card__icon-po {
+    font-size: 1em;
+    color: #a7a7a7;
+}
+
+
+// Comments 
+
+.blog {
+    padding-top: 5.8em;
+    // border: 1px solid red;
+
+    &__title {
+        margin-bottom: 1em;
+        padding: 1em;
+        border: 1px solid #cccc;
+        color: #202020;
+        background-color: #f2f2f2;
+    }
+}
+
+aside {
+    padding: 3em 1em;
+    border: 1px solid rgb(213, 213, 213);
+    height: 40em;
+    background-color: white;
+    border-radius: .3em;
+}
+
+
+.comments {
+    height: 10em;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        height: 5em;
+    }
+
+    &__field {
+        width: 70%;
+        height: 100%;
+        border: 1px solid rgb(203, 203, 203);
+
+        > legend {
+            padding: 0 .5em;
+            color: #3d3d3d;
+        }
+    }
+
+    &__input {
+        margin-right: .3em;
+        font-size: 1.2em;
+        padding: 1.4em 1em;
+        height: 1.7em;
+        width: 28em;
+        outline: 0;
+        border: 0;
+    }
+
+    &__button__send {
+        margin-top: .5em;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 1.58em 0;
+        width: 6em;
+        outline: 0;
+        border: 1px solid rgb(75, 51, 230);
+        color: white;
+        background-color: rgb(75, 51, 230);
+        cursor: pointer;
+        transition: background-color .4s ease-in-out;
+
+        &:hover {
+            background-color: rgb(86, 125, 242);
+            border-color: rgb(86, 125, 242);
+        }
+    }
+
+
+    &__bottom {
+        padding: 2em 0;
+        height: 22em;
+        overflow-y: scroll;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            display: flex;
+            padding: 0 .5em;
+            justify-content: space-between;
+            width: 98.5%;
+            min-height: 4em;
+            margin-bottom: 1.5em;
+            border: 1px solid rgb(206, 206, 206);
+        }
+
+        &__span {
+            padding: 1em;
+            font-size: 1.1em;
+            max-width: 97%;
+            min-height: 100%;
+            color: rgb(90, 90, 194);
+        }
+
+        .icons {
+            color: #979797;
+            cursor: pointer;
+            transition: transform .5s ease-in-out;
+            height: 1.5em;
+
+            &:hover {
+                transform: rotate(242deg);
+            }
+        }
+    }
+}
+
+
